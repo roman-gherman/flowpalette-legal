@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Delete your FlowPalette account and associated data">
+    <title>Account Deletion - FlowPalette</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #1e293b;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #9333EA 0%, #6B21A8 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            color: #9333EA;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section p {
+            margin-bottom: 15px;
+            color: #475569;
+            font-size: 1.05em;
+        }
+
+        .steps {
+            background: #f8fafc;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+
+        .step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .step:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .step-number {
+            background: linear-gradient(135deg, #9333EA 0%, #6B21A8 100%);
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+            margin-right: 15px;
+        }
+
+        .step-content h3 {
+            color: #1e293b;
+            margin-bottom: 5px;
+            font-size: 1.1em;
+        }
+
+        .step-content p {
+            color: #64748b;
+            margin: 0;
+        }
+
+        .warning-box {
+            background: #fef2f2;
+            border-left: 4px solid #ef4444;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .warning-box h3 {
+            color: #dc2626;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .warning-box p {
+            color: #991b1b;
+            margin: 5px 0;
+        }
+
+        .info-box {
+            background: #eff6ff;
+            border-left: 4px solid #3b82f6;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .info-box h3 {
+            color: #1e40af;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .info-box p {
+            color: #1e3a8a;
+            margin: 5px 0;
+        }
+
+        .info-box ul {
+            margin: 10px 0 0 20px;
+            color: #1e3a8a;
+        }
+
+        .info-box li {
+            margin: 5px 0;
+        }
+
+        .email-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #9333EA 0%, #6B21A8 100%);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.05em;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 12px rgba(147, 51, 234, 0.3);
+        }
+
+        .email-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(147, 51, 234, 0.4);
+        }
+
+        .footer {
+            background: #f8fafc;
+            padding: 30px 40px;
+            text-align: center;
+            color: #64748b;
+            font-size: 0.95em;
+        }
+
+        .footer a {
+            color: #9333EA;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                margin: 20px auto;
+            }
+
+            .header {
+                padding: 30px 20px;
+            }
+
+            .header h1 {
+                font-size: 1.5em;
+            }
+
+            .content {
+                padding: 30px 20px;
+            }
+
+            .section h2 {
+                font-size: 1.3em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>💜 FlowPalette Account Deletion</h1>
+            <p>Delete your account and associated data</p>
+        </div>
+
+        <div class="content">
+            <div class="section">
+                <h2>🔒 Delete Your Account In-App</h2>
+                <p>The easiest and fastest way to delete your FlowPalette account is directly within the app:</p>
+
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Open FlowPalette App</h3>
+                            <p>Launch the FlowPalette app on your device</p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Go to Settings</h3>
+                            <p>Tap the Settings icon (gear icon) in the bottom navigation bar</p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Navigate to Account Settings</h3>
+                            <p>Tap on "Account" or "Profile" section</p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Select "Delete Account"</h3>
+                            <p>Scroll down and tap "Delete Account" button</p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h3>Confirm Deletion</h3>
+                            <p>Review the warning and confirm that you want to permanently delete your account</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="warning-box">
+                    <h3>⚠️ Important: This Action is Permanent</h3>
+                    <p><strong>Once you delete your account, the following data will be permanently removed within 30 days:</strong></p>
+                    <ul>
+                        <li>All your tasks and task templates</li>
+                        <li>Mood and energy tracking history</li>
+                        <li>Focus session data (Pomodoro history)</li>
+                        <li>Account information and settings</li>
+                        <li>Cloud synced data (if Premium user)</li>
+                    </ul>
+                    <p style="margin-top: 15px;"><strong>This action cannot be undone.</strong></p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>✉️ Alternative: Request Deletion via Email</h2>
+                <p>If you're unable to access the app or prefer to request deletion via email, you can contact us:</p>
+
+                <div class="info-box">
+                    <h3>📧 Email Deletion Request</h3>
+                    <p>Send an email to <strong>gherman.roman@gmail.com</strong> with the following information:</p>
+                    <ul>
+                        <li>Subject line: "Account Deletion Request"</li>
+                        <li>Your registered email address</li>
+                        <li>Reason for deletion (optional)</li>
+                    </ul>
+                    <p style="margin-top: 15px;">We will process your request within <strong>7 business days</strong> and send you a confirmation email.</p>
+                </div>
+
+                <p style="text-align: center; margin-top: 30px;">
+                    <a href="mailto:gherman.roman@gmail.com?subject=Account%20Deletion%20Request&body=Hi%2C%0A%0AI%20would%20like%20to%20request%20the%20deletion%20of%20my%20FlowPalette%20account.%0A%0ARegistered%20Email%3A%20%5BYour%20Email%20Here%5D%0A%0AThank%20you." class="email-button">
+                        Send Deletion Request Email
+                    </a>
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>❓ Frequently Asked Questions</h2>
+
+                <div style="margin-top: 20px;">
+                    <h3 style="color: #1e293b; margin-bottom: 8px;">How long does deletion take?</h3>
+                    <p style="color: #64748b;">Your account and all associated data will be permanently deleted within 30 days of your request.</p>
+                </div>
+
+                <div style="margin-top: 20px;">
+                    <h3 style="color: #1e293b; margin-bottom: 8px;">Can I recover my account after deletion?</h3>
+                    <p style="color: #64748b;">No, account deletion is permanent and cannot be undone. All your data will be permanently removed from our servers.</p>
+                </div>
+
+                <div style="margin-top: 20px;">
+                    <h3 style="color: #1e293b; margin-bottom: 8px;">What happens to my Premium subscription?</h3>
+                    <p style="color: #64748b;">If you have an active Premium subscription, it will be cancelled immediately. Please note that deletion does not automatically trigger a refund. Contact us if you need a refund for an active subscription.</p>
+                </div>
+
+                <div style="margin-top: 20px;">
+                    <h3 style="color: #1e293b; margin-bottom: 8px;">Will deleting the app delete my account?</h3>
+                    <p style="color: #64748b;">No, simply uninstalling the app does not delete your account. You must explicitly delete your account using the methods described above.</p>
+                </div>
+
+                <div style="margin-top: 20px;">
+                    <h3 style="color: #1e293b; margin-bottom: 8px;">What data is retained after deletion?</h3>
+                    <p style="color: #64748b;">We retain minimal anonymous analytics data (no personal information) for legal and operational purposes. All personally identifiable data is permanently deleted.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>🛡️ Privacy & Data Protection</h2>
+                <p>Your privacy is important to us. For more information about how we handle your data, please review our Privacy Policy.</p>
+                <p style="margin-top: 15px;">
+                    <strong>Data Protection Rights:</strong> You have the right to request access, correction, or deletion of your personal data under GDPR (EU) and CCPA (California) regulations.
+                </p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p><strong>FlowPalette</strong> - Task management designed for ADHD brains 💜</p>
+            <p style="margin-top: 10px;">
+                Questions? Email us at <a href="mailto:gherman.roman@gmail.com">gherman.roman@gmail.com</a>
+            </p>
+            <p style="margin-top: 15px; font-size: 0.9em;">
+                <a href="privacy-policy.html">Privacy Policy</a> •
+                <a href="terms-of-service.html">Terms of Service</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
